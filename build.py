@@ -30,7 +30,7 @@ def karta(k, n, nazwa, opis, cena, stara, dost, alt, duzy):
     for i in range(1, n + 1):
         lazy = 'loading="lazy" decoding="async"'
         zd.append(f'<button class="zd" type="button" data-lb="img/{k}-{i}-{w2}.webp" aria-label="Powiększ zdjęcie {i} z {n}">'
-                  f'<img src="img/{k}-{i}-{w1}.webp" width="600" height="450" {lazy} alt="{H.escape(alt)}{"" if i == 1 else f", zdjęcie {i}"}"></button>')
+                  f'<img {"src" if i == 1 else "data-src"}="img/{k}-{i}-{w1}.webp" width="600" height="450" {lazy} alt="{H.escape(alt)}{"" if i == 1 else f", zdjęcie {i}"}"></button>')
     kropki = ''.join(f'<i{" class=on" if i == 0 else ""}></i>' for i in range(n)) if n > 1 else ''
     strz = '<span class="gs"><button type="button" class="gp" aria-label="Poprzednie zdjęcie"></button><button type="button" class="gn" aria-label="Następne zdjęcie"></button></span>' if n > 1 else ''
     st = f'<s>{stara} zł</s>' if stara else ''

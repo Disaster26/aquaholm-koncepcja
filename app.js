@@ -36,6 +36,9 @@
   document.querySelectorAll('.gal').forEach(function(g){
     var gt=g.querySelector('.gt'),kr=g.querySelectorAll('.kr i'),p=g.querySelector('.gp'),n=g.querySelector('.gn');
     function w(){return gt.clientWidth||1}
+    var zal=false;function wczytaj(){if(zal)return;zal=true;gt.querySelectorAll('img[data-src]').forEach(function(i){i.src=i.dataset.src;i.removeAttribute('data-src')})}
+    ['pointerenter','touchstart','focusin','scroll'].forEach(function(ev){gt.addEventListener(ev,wczytaj,{passive:true,once:true})});
+    if(p){p.addEventListener('pointerenter',wczytaj,{once:true});n.addEventListener('pointerenter',wczytaj,{once:true})}
     przeciagaj(gt,w);
     function upd(){var i=Math.round(gt.scrollLeft/w());kr.forEach(function(k,j){k.classList.toggle('on',j===i)});if(p){p.disabled=i<=0;n.disabled=i>=gt.children.length-1}}
     gt.addEventListener('scroll',upd,{passive:true});upd();
