@@ -1,5 +1,5 @@
 # Buduje index.html z src.html: znak Wylinki (oficjalny fragment) + karty produktow.
-# Ceny i dostepnosc z aquaholm.pl (WooCommerce Store API), sprawdzone 18.11.2026.
+# Ceny i dostepnosc z aquaholm.pl (WooCommerce Store API), sprawdzone 20.11.2026.
 import html as H
 s = open('src.html', encoding='utf-8').read()
 s = s.replace('{{BADGE_STYLE}}', open('badge_style.part', encoding='utf-8').read().replace('<style>', '').replace('</style>', ''))
@@ -10,7 +10,7 @@ JEST = ('jest', 'Dostępna')
 BRAK = ('brak', 'Brak w magazynie')
 
 WANNY = [
-    ('w8008', 4, 'Wanna A9008 Premium Line', '180 x 120 x 58 cm, dysze obrotowe, podgrzewacz wody, wodospad, Bluetooth, pilot', '7 490', '11 900', ZAM, 'Biała prostokątna wanna z hydromasażem A9008 z podświetleniem LED'),
+    ('w8008', 4, 'Wanna A9008 Premium Line', '180 x 120 x 59 cm, dysze obrotowe, podgrzewacz wody, wodospad, Bluetooth, pilot', '7 490', '11 900', ZAM, 'Biała prostokątna wanna z hydromasażem A9008 z podświetleniem LED'),
     ('w8008c', 4, 'Czarna wanna A9008C Premium Line', '180 x 120 x 59 cm, dysze obrotowe, podgrzewacz wody, wodospad, Bluetooth, pilot', '7 490', '11 900', ZAM, 'Czarna prostokątna wanna z hydromasażem A9008C z podświetleniem LED'),
     ('w9011', 3, 'Wanna narożna A9011 Premium Line', '150 x 150 x 58 cm, Bluetooth, podgrzewacz wody, USB, pilot', '7 490', '11 900', JEST, 'Narożna wanna z hydromasażem A9011 z zielonym podświetleniem'),
     ('w9001', 4, 'Wanna A9001 Premium Line', '170 x 78 x 60 cm, dysze obrotowe, podgrzewacz wody, wodospad, Bluetooth, pilot', '6 990', '11 250', ZAM, 'Prostokątna wanna z hydromasażem A9001 z kolorowym podświetleniem'),
