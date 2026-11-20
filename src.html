@@ -8,8 +8,7 @@
 <meta name="description" content="Sklep producenta wanien z hydromasażem Aquaholm Premium Line i bieżni elektrycznych APVsport. Raty 0%, PayPo, BLIK, serwis i części zamienne. Bielsk Podlaski, tel. 503 538 038.">
 <meta name="theme-color" content="#06243f">
 <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
-<link rel="preload" as="image" href="img/hero-m-760.webp" imagesrcset="img/hero-m-480.webp 480w, img/hero-m-760.webp 760w" imagesizes="100vw" media="(max-width:760px)" fetchpriority="high">
-<link rel="preload" as="image" href="img/hero-1600.webp" imagesrcset="img/hero-1024.webp 1024w, img/hero-1600.webp 1600w, img/hero-2200.webp 2200w" imagesizes="100vw" media="(min-width:761px)" fetchpriority="high">
+<link rel="preload" as="image" href="img/hero-1600.webp" imagesrcset="img/hero-1024.webp 1024w, img/hero-1600.webp 1600w, img/hero-2200.webp 2200w" imagesizes="(max-width:760px) max(100vw, 72svh), (max-width:1100px) and (orientation:portrait) 100vw, min(2400px, max(100vw, calc((100svh - 78px) * 1.78)))" fetchpriority="high">
 <link rel="preload" as="font" type="font/woff2" href="fonts/archivo-rdzen.woff2" crossorigin>
 <link rel="preload" as="font" type="font/woff2" href="fonts/archivo-pl.woff2" crossorigin>
 <style>
@@ -87,9 +86,9 @@ p{margin:0}
 
 /* pierwszy ekran */
 .hero{position:relative;display:flex;align-items:center;min-height:calc(100svh - var(--hh));background:var(--nav);color:#fff;overflow:hidden}
-.hero .foto{position:absolute;inset:0}
+.hero .foto{position:absolute;top:0;bottom:0;right:0;width:min(100%,2400px)}
 .hero .foto img{width:100%;height:100%;object-fit:cover;object-position:62% 60%}
-.hero .foto::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(6,36,63,.93) 0%,rgba(6,36,63,.8) 30%,rgba(6,36,63,.25) 58%,rgba(6,36,63,0) 75%)}
+.hero .foto::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(6,36,63,1) 0%,rgba(6,36,63,.8) 30%,rgba(6,36,63,.25) 58%,rgba(6,36,63,0) 75%)}
 .hero-in{position:relative;z-index:2;width:var(--w);margin:0 auto;padding:clamp(40px,7vh,90px) 0}
 .hero h1{font-size:clamp(40px,min(4vw,7.6vh),84px);font-stretch:90%;max-width:20ch}
 .hero .opis{font-size:clamp(17px,1.12vw,22px);line-height:1.5;max-width:46ch;margin-top:clamp(16px,2.4vh,26px);color:#dfe9f3}
@@ -109,6 +108,15 @@ p{margin:0}
   .hero .akcja{margin-top:24px}
   .hero .btn{width:100%;justify-content:center}
   .hero .info{font-size:.86rem;gap:4px 16px;margin-top:16px}
+}
+@media (min-width:761px) and (max-width:1100px) and (orientation:portrait){
+  .hero{flex-direction:column;align-items:stretch}
+  .hero .foto{position:relative;flex:0 0 auto;height:min(56.25vw,50svh);width:100%}
+  .hero-in{flex:1 1 auto;display:flex;flex-direction:column;justify-content:center}
+  .hero .foto img{position:absolute;inset:0;object-position:50% 45%}
+  .hero .foto::after{background:linear-gradient(0deg,var(--nav) 0%,rgba(6,36,63,.55) 16%,rgba(6,36,63,0) 42%)}
+  .hero-in{flex:0 0 auto;padding:0 0 24px;margin-top:-26px}
+  .hero .akcja{margin-top:24px}
 }
 @media (max-width:760px) and (max-height:700px){.hero h1{font-size:clamp(27px,7.6vw,34px)}.hero .opis{font-size:15px;line-height:1.45}.hero .info{margin-top:14px}}
 
@@ -344,8 +352,7 @@ textarea{min-height:120px;resize:vertical}
 <section class="hero" id="start">
   <div class="foto">
     <picture>
-      <source media="(max-width:760px)" srcset="img/hero-m-480.webp 480w, img/hero-m-760.webp 760w" sizes="100vw">
-      <img src="img/hero-1600.webp" srcset="img/hero-1024.webp 1024w, img/hero-1600.webp 1600w, img/hero-2200.webp 2200w" sizes="100vw" width="1600" height="900" fetchpriority="high" alt="Narożna wanna z hydromasażem Aquaholm Premium Line z podświetloną wodą">
+      <img src="img/hero-1600.webp" srcset="img/hero-1024.webp 1024w, img/hero-1600.webp 1600w, img/hero-2200.webp 2200w" sizes="(max-width:760px) max(100vw, 72svh), (max-width:1100px) and (orientation:portrait) 100vw, min(2400px, max(100vw, calc((100svh - 78px) * 1.78)))" width="1600" height="900" fetchpriority="high" alt="Narożna wanna z hydromasażem Aquaholm Premium Line z podświetloną wodą">
     </picture>
   </div>
   <div class="hero-in">
