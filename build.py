@@ -19,6 +19,7 @@ WANNY = [
 BIEZNIE = [
     ('b8000', 2, 'Bieżnia APV8000 Futura Prestige', 'silnik 6 KM (10 KM szczytowo), pas 145 x 58 cm, ekran Android 15,6", do 180 kg', '4 990', '7 290', ZAM, 'Bieżnia elektryczna APVsport APV8000 z dużym ekranem'),
     ('b8000k', 2, 'Bieżnia APV8000 Futura Prestige, wersja komercyjna', 'silnik 6 KM, pas biegowy 145 x 58 cm', '5 590', '8 990', ZAM, 'Bieżnia elektryczna APVsport APV8000 w wersji komercyjnej'),
+    ('bel', 1, 'Bieżnia APV8000 Elite Series 5 KM', 'silnik 5 KM (8 KM szczytowo), pas 145 x 58 cm, ekran dotykowy Android 10,1", do 160 kg', '4 790', '6 790', ZAM, 'Bieżnia elektryczna APVsport APV8000 Elite Series'),
     ('b6000', 3, 'Bieżnia APV6000 z wyposażeniem', 'ekran Android 10,1", pas 135 x 48 cm, masażer, hantle, brzuszki, mata', '6 490', None, BRAK, 'Bieżnia elektryczna APVsport APV6000'),
     ('b900', 3, 'Bieżnia APV900 S', 'ekran LCD, pas biegowy 130 x 38 cm', '3 985', None, BRAK, 'Bieżnia elektryczna APVsport APV900 S'),
     ('pas', 1, 'Pas piersiowy telemetryczny', 'pomiar tętna, wynik na ekranie bieżni APV8000', '125', '139', JEST, 'Pas piersiowy do pomiaru tętna'),
