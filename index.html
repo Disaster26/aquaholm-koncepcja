@@ -91,13 +91,12 @@ p{margin:0}
 .pasek a{color:#fff;text-decoration:none}.pasek a:hover{text-decoration:underline}
 .pasek .pl{display:flex;gap:22px}
 @media (max-width:760px){.pasek{display:none}}
-/* 24.11 rozmowa: sprzedawane takze w duzych sieciach */
-.sieci{padding:clamp(40px,4.5vw,72px) 0;border-top:1px solid var(--line)}
-.sieci .wrap{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:20px 48px}
-.sieci h2{font-size:clamp(20px,1.5vw,28px);max-width:26ch}
-.sieci ul{list-style:none;display:flex;flex-wrap:wrap;align-items:center;gap:16px clamp(28px,4vw,72px);margin:0;padding:0}
-.sieci li{font-size:clamp(24px,2.2vw,40px);font-weight:800;letter-spacing:-.02em;color:#3d4247;filter:grayscale(1);opacity:.8}
-.sieci p{width:100%;color:var(--mut);font-size:.92rem;margin:0}
+/* 24.11 rozmowa + propozycja klienta z AI (WA 19:07): pas sieci pod pierwszym ekranem, szare nazwy */
+.sieci{padding:clamp(22px,2.4vw,40px) 0;background:#eef2f6;border-bottom:1px solid #d8dee4}
+.sieci .wrap{display:flex;flex-direction:column;align-items:center;gap:14px;text-align:center}
+.sieci h2{font-size:clamp(14px,1vw,17px);font-weight:600;color:#4d5862;letter-spacing:0;max-width:none}
+.sieci ul{list-style:none;display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:10px clamp(22px,3.4vw,64px);margin:0;padding:0}
+.sieci li{font-size:clamp(19px,1.7vw,30px);font-weight:800;letter-spacing:-.02em;color:#8a939b}
 /* pierwszy ekran: tekst + film z nagran klienta; 24.11 rozmowa: na komputerze film na cala szerokosc (jak ircsklep.pl / Action) */
 .hero{position:relative;display:flex;align-items:center;min-height:calc(100svh - var(--hh));background:radial-gradient(120% 90% at 85% 40%,#0b3a63 0%,var(--nav) 55%,#041a2e 100%);color:#fff;overflow:hidden}
 .hero::before{content:"";position:absolute;width:clamp(260px,34vw,640px);aspect-ratio:1;border-radius:50%;right:-8vw;top:-14vw;border:2px solid rgba(79,177,238,.22);pointer-events:none}
@@ -388,6 +387,13 @@ textarea{min-height:120px;resize:vertical}
   </div>
 </section>
 
+<section class="sieci" aria-labelledby="h-si">
+  <div class="wrap">
+    <h2 id="h-si">Produkty naszych marek znajdziesz w ofercie czołowych sieci</h2>
+    <ul><li>Media Expert</li><li>Empik</li><li>Erli</li><li>Allegro</li><li>Amazon</li><li>RTV Euro AGD</li></ul>
+  </div>
+</section>
+
 <section class="sek" id="kategorie" aria-labelledby="h-kat">
   <div class="wrap">
     <div class="glowa"><div><h2 id="h-kat">Kategorie sklepu</h2><p>Dwie marki, dwa rodzaje sprzętu: wanny do relaksu w domu i bieżnie do treningu bez wychodzenia z domu.</p></div></div>
@@ -549,13 +555,6 @@ textarea{min-height:120px;resize:vertical}
       <p>Współpracujemy ze studiami projektowymi, dlatego nasze wanny i bieżnie mają własny, nowoczesny wygląd. Do każdego produktu dołączamy dokument gwarancyjny, instrukcję montażu i obsługi oraz druk reklamacyjny.</p>
       <div class="marki"><div class="aq"><b>Aquaholm</b><span>wanny z hydromasażem</span></div><div class="apv"><b>APVsport</b><span>bieżnie elektryczne i akcesoria</span></div></div>
     </div>
-  </div>
-</section>
-
-<section class="sieci" aria-labelledby="h-si">
-  <div class="wrap">
-    <h2 id="h-si">Nasze wanny i bieżnie sprzedają także duże sieci</h2>
-    <ul><li>Media Expert</li><li>Empik</li></ul>
   </div>
 </section>
 
